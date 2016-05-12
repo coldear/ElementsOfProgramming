@@ -12,10 +12,14 @@ class ArrayProblems {
 //        boolean canReachEnd = canReachEnd(steps);
 //        System.out.print(canReachEnd);
 
-        int[] input = {1,1,3,3,3,5,7,7,7,9};
-        int uniqCount = removeDuplicateInSortedArray(input);
-        System.out.print(uniqCount);
-        printArray(input);
+//        int[] input = {1,1,3,3,3,5,7,7,7,9};
+//        int uniqCount = removeDuplicateInSortedArray(input);
+//        System.out.print(uniqCount);
+
+
+        double[] prices = {310,310,275,295,260,270,290,230,255,250};
+        System.out.println(computeMaxProfit(prices));
+
     }
     
     /* partion array into 2 parts, even numbers and odd number.
@@ -72,10 +76,23 @@ class ArrayProblems {
     }
     
     /*
-    * 
+    * given array of stock price on different days, find max profit you can make by buying and selling one share.
+    * solution: max profit on each day is the difference between current price and the lowest price we've seen so far.
+    * compute that for each day and return the max among them.
     */
-    public double computeMaxProfit(double[] prices) {
-        
+    public static double computeMaxProfit(double[] prices) {
+        double minPrice = Double.MAX_VALUE;
+        double maxProfit = Double.MIN_VALUE;
+        for (double price : prices) {
+            if (price < minPrice) {
+                minPrice = price;
+            }
+            double profit = price - minPrice;
+            if (profit > maxProfit) {
+                maxProfit = profit;
+            }
+        }
+        return maxProfit;
     }
     
     static void printArray(int[] input) {
