@@ -1,1 +1,2 @@
 # ElementsOfProgramming
+This repo is for personal coding practise for the problems in the book [Elements of Programming Interviews in JAVA](http://www.amazon.com/Elements-Programming-Interviews-Java-Insiders/dp/1517435803)
