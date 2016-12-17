@@ -30,7 +30,7 @@ public class Bits {
         throw new RuntimeException("all 0s/1s");
     }
     
-    static long multipley(long a, long b) {
+    static long multiply(long a, long b) {
         long sum = 0;
         while (a != 0) {
             if ((a & 1) != 0) {

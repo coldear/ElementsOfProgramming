@@ -8,17 +8,17 @@ class ArrayProblems {
         //evenOdd(input);
         //printArray(input);
         
-//        int[] steps = {3,3,1,0,2,0,0};
-//        boolean canReachEnd = canReachEnd(steps);
-//        System.out.print(canReachEnd);
+        int[] steps = {3,3,1,0,2,0,0};
+        boolean canReachEnd = canReachEnd(steps);
+        System.out.println(canReachEnd);
 
-//        int[] input = {1,1,3,3,3,5,7,7,7,9};
-//        int uniqCount = removeDuplicateInSortedArray(input);
-//        System.out.print(uniqCount);
+        int[] input = {1,1,3,3,3,5,7,7,7,9};
+        int uniqCount = removeDuplicateInSortedArray(input);
+        System.out.println(uniqCount);
 
 
         double[] prices = {310,310,275,295,260,270,290,230,255,250};
-        System.out.println(computeMaxProfit(prices));
+        System.out.println(maxProfitOneSell(prices));
 
     }
     
@@ -80,7 +80,7 @@ class ArrayProblems {
     * solution: max profit on each day is the difference between current price and the lowest price we've seen so far.
     * compute that for each day and return the max among them.
     */
-    public static double computeMaxProfit(double[] prices) {
+    public static double maxProfitOneSell(double[] prices) {
         double minPrice = Double.MAX_VALUE;
         double maxProfit = Double.MIN_VALUE;
         for (double price : prices) {
