@@ -83,7 +83,11 @@ public class Bits {
         }
         return result;
     }
-    
+
+    static long lowestBitSet(long x) {
+        return x & (~(x-1));
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //double d = scanner.nextDouble();
@@ -97,8 +101,10 @@ public class Bits {
         //long x = multipley(n, m);
         //long x = divide(n, m);
         //double x = power(d, m);
-        long x = reverse(n);
-        System.out.println(x);
-        //System.out.println(Long.toBinaryString(x));        
+        //long x = reverse(n);
+        long x = 0b101000010100010110100001010001011010000101000101100000000000000L;
+        long y = lowestBitSet(x);
+        System.out.println(Long.toBinaryString(x));
+        System.out.println(Long.toBinaryString(y));
     }
 }
