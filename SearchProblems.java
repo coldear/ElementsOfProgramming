@@ -17,7 +17,6 @@ class SearchProblems {
             System.out.println("left=" + left + ";right=" + right + ";pivotIndex=" + pivotIndex);
             System.out.println("before: " + A);
             int partitionIndex = partitionAroundPivot(A, left, right, pivotIndex);
-            System.out.println("partitionIndex: " + partitionIndex);
             if (partitionIndex == k) {
                 result = A.get(partitionIndex);
                 break;
